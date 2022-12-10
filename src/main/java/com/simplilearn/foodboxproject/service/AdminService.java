@@ -13,7 +13,7 @@ public interface AdminService {
 	List<Admin> fetchAdminList();
 
 // Update Operation
-	Admin updateAdmin(Admin admin, String username);
+	Admin updateAdmin(Admin admin, int id);
 // delete Operation
-	void deleteAdminById(String username);
+	void deleteAdminById(int id);
 }

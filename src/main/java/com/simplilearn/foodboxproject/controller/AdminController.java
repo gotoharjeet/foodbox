@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -49,14 +50,15 @@ public class AdminController {
 	}
 	
 //	Upadate Operation
-	public Admin updateAdmin(@RequestBody Admin admin,@PathVariable("username") String username)
+	@PutMapping("/updateAdmin/{id}")
+	public Admin updateAdmin(@RequestBody Admin admin,@PathVariable("id") int id)
 	{
-		return adminService.updateAdmin(admin, username);
+		return adminService.updateAdmin(admin, id);
 	}
 	
-	@DeleteMapping("admins/{username}")
-	public String deleteAdminById(@PathVariable("username")
-												String username)
+	@DeleteMapping("admins/{id}")
+	public String deleteAdminById(@PathVariable("id")
+												int username)
 	{
 		return "Deleted Successfully";
 	}

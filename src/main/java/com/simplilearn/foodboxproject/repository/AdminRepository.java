@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import com.simplilearn.foodboxproject.model.Admin;
 
 @Repository
-public interface AdminRepository extends JpaRepository<Admin,String>{
+public interface AdminRepository extends JpaRepository<Admin,Integer>{
 	
 	
 

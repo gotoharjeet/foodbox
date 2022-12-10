@@ -48,27 +48,27 @@ public class Admin {
 		return id;
 	}
 
-//	@Autowired
-//	public void setId(int id) {
-//		this.id = id;
-//	}
+	@Autowired
+	public void setId(int id) {
+		this.id = id;
+	}
 
 
 	public String getUsername() {
 		return username;
 	}
-//	@Autowired
-//	public void setUsername(String username) {
-//		this.username = username;
-//	}
+	@Autowired
+	public void setUsername(String username) {
+		this.username = username;
+	}
 	public String getPassword() {
 		return password;
 	}
 	
-//	@Autowired
-//	public void setPassword(String password) {
-//		this.password = password;
-//	}
+	@Autowired
+	public void setPassword(String password) {
+		this.password = password;
+	}
 
 	
 }

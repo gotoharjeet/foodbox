@@ -29,29 +29,31 @@ public class AdminServiceImpl implements AdminService {
 	}
 
 	//Update Operation
-	public Admin updateAdmin(Admin admin, String username) {
+	public Admin updateAdmin(Admin admin, int id) {
 		// TODO Auto-generated method stub
-
-		Admin adminDB=adminRepository.findById(username).get();
+		System.out.println("inside the updateAdmin method of service"+id);
+		Admin adminDB=adminRepository.findById(id).get();
 		
-//		if(Objects.nonNull(admin.getUsername()) 
-//				&& !"".equalsIgnoreCase(admin.getUsername())) {
-//			adminDB.setUsername(admin.getUsername());
-//		}
+		if(Objects.nonNull(admin.getUsername()) 
+				&& !"".equalsIgnoreCase(admin.getUsername())) {
+			adminDB.setUsername(admin.getUsername());
+		}
 		
-//		if(Objects.nonNull(
-//				admin.getPassword())) {
-//			adminDB.setPassword(admin.getPassword());
-//		}
+		if(Objects.nonNull(
+				admin.getPassword())) {
+			adminDB.setPassword(admin.getPassword());
+		}
 		return adminRepository.save(adminDB);
 	}
 
 	//Delete Operation
-	public void deleteAdminById(String username) {
+	public void deleteAdminById(int id) {
 		// TODO Auto-generated method stub
-		adminRepository.deleteById(username);
+		adminRepository.deleteById(id);
 		
 	}
+
+	
 	
 	
 	

@@ -23,6 +23,8 @@ import lombok.NoArgsConstructor;
 @Table(name="admin_tables")
 public class Admin {
 	
+	public Admin() {}
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="Id")

@@ -42,8 +42,8 @@ public class AdminController {
 	}
 	
 	//Read Operation
-	
-	public List<Admin> fetchDepartmentList()
+	@PostMapping("/adminList")
+	public List<Admin> fetchAdminList()
 	{
 		return adminService.fetchAdminList();
 	}

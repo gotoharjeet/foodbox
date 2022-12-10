@@ -49,6 +49,7 @@ public class AdminServiceImpl implements AdminService {
 	//Delete Operation
 	public void deleteAdminById(int id) {
 		// TODO Auto-generated method stub
+		System.out.println("inside the deleteAdminById method of service :"+id);
 		adminRepository.deleteById(id);
 		
 	}

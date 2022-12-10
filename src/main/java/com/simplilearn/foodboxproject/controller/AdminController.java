@@ -56,10 +56,12 @@ public class AdminController {
 		return adminService.updateAdmin(admin, id);
 	}
 	
-	@DeleteMapping("admins/{id}")
+	@DeleteMapping("/admins/{id}")
 	public String deleteAdminById(@PathVariable("id")
-												int username)
+												int id)
 	{
-		return "Deleted Successfully";
+		System.out.println("recode deleted sucessfully");
+		adminService.deleteAdminById(id);
+		return "Deleted Successfully........"+id;
 	}
 }

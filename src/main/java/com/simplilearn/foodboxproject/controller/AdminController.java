@@ -62,6 +62,6 @@ public class AdminController {
 	{
 		System.out.println("recode deleted sucessfully");
 		adminService.deleteAdminById(id);
-		return "Deleted Successfully........"+id;
+		return "Deleted Successfully............"+id;
 	}
 }

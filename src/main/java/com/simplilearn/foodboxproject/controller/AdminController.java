@@ -2,8 +2,9 @@ package com.simplilearn.foodboxproject.controller;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 
-
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
@@ -33,6 +34,7 @@ public class AdminController {
 		System.out.println("Wahe Guru Ji");
 		return Arrays.asList(new Admin(1,"admin","admin"));
 	}
+	
 	//Save Operation
 	@PostMapping("/saveAdmin")
 	public Admin saveAdmin(@Validated @RequestBody
@@ -64,4 +66,25 @@ public class AdminController {
 		adminService.deleteAdminById(id);
 		return "Deleted Successfully............"+id;
 	}
+	
+	//Verify 
+	@SuppressWarnings("rawtypes")
+	@PostMapping("/admins/{username}")
+	public boolean verifyAdminLogin(@RequestBody Map loginData, @PathVariable(name = "username") String username, HttpSession session) {
+		String lusername=(String) loginData.get("username");
+		String lpassword=(String) loginData.get("password");
+		
+		Admin admin = adminService.findByusername(username);
+		//System.out.println(admin.getUsername()+" "+admin.getPassword());
+		if(admin!=null && admin.getUsername().equals(lusername) && admin.getPassword().equals(lpassword)) {
+			session.setAttribute("adminUsername", lusername);
+			//System.out.println(admin.getUsername()+" "+admin.getPassword());
+			return true;
+		}else {
+			//System.out.println(admin.getUsername()+" "+admin.getPassword());
+			return false;
+		}
+	}
+	
+	
 }

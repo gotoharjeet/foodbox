@@ -6,6 +6,7 @@ import com.simplilearn.foodboxproject.model.Admin;
 
 public interface AdminService {
 
+	
 //	Save Operation
 	Admin saveAdmin(Admin admin);
 
@@ -16,4 +17,6 @@ public interface AdminService {
 	Admin updateAdmin(Admin admin, int id);
 // delete Operation
 	void deleteAdminById(int id);
+// FindByusername
+	Admin findByusername(String username);
 }

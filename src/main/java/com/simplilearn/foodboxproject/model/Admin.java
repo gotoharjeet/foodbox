@@ -23,8 +23,17 @@ import lombok.NoArgsConstructor;
 @Table(name="admin_tables")
 public class Admin {
 	
-	public Admin() {}
+	public Admin() 
+	{
+		super();
+	}
 	
+	
+	public Admin(String username, String password) {
+		super();
+		this.username = username;
+		this.password = password;
+	}
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name="Id")

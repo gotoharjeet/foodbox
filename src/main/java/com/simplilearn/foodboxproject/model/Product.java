@@ -1,6 +1,7 @@
 package com.simplilearn.foodboxproject.model;
 
 import javax.persistence.Entity;
+
 import javax.persistence.Id;
 
 @Entity

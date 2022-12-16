@@ -67,6 +67,7 @@ public class PurchaseController {
 		List<Cart> cartList = cartRepository.findAll();
 		Purchase purchase = new Purchase();
 		String cust_email=(String)buyProdMap.get("email");
+		System.out.println("CUST_EMAIL :"+cust_email);
 		Customer customer = customerRepository.findByEmail(cust_email);
 		String transId = (String)buyProdMap.get("transactionId");
 		for(Cart cl:cartList) {

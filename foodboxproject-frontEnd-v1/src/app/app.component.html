@@ -1,3 +1,31 @@
 
 <app-header></app-header>
- <h1>{{heading}}</h1>
+<h1 [class]="isactive?'active':'inactive'" [class]="{c1:apply}">{{heading}}</h1>
+<h1 [style]="{color:cvar}">Dasaam PaatShaniyaa Ji</h1>
+<h1 [style.color]="hascolor?'red':'blue'">Dahan Sri Guru Nanakdev Sahib Ji</h1>
+<h1 [style.color]="hascolor?'red':'blue'">Dahan Sri Guru Angaddev Sahib Ji</h1>
+<h1 [style.color]="hascolor?'red':'blue'">Dahan Sri Guru Amardas Sahib Ji</h1>
+<h1 [style.color]="hascolor?'red':'blue'">Dahan Sri Guru Ramdas Sahib Ji</h1>
+<h1 [style.color]="hascolor?'red':'blue'">Dahan Sri Guru Arjundev Sahib Ji</h1>
+<h1 [style.color]="hascolor?'red':'blue'">Dahan Sri Guru Hargobind Sahib Ji</h1>
+<h1 [style.color]="hascolor?'red':'blue'">Dahan Sri Guru Harrai Sahib Ji</h1>
+<h1 [style.color]="hascolor?'red':'blue'">Dahan Sri Guru Harkishan Sahib Ji</h1>
+<h1 [style.color]="hascolor?'red':'blue'">Dahan Sri Guru Tekbahadur Sahib Ji</h1>
+<h1 [style.color]="hascolor?'red':'blue'">Dahan Sri Guru Gobind Singh Sahib Ji</h1>
+<h1 [style.color]="hascolor?'red':'blue'">Dahan Sri Guru Granth Sahib Ji</h1>
+
+<button (click)='incr()'>increment</button>
+<h1>{{count}}</h1>
+<button (click)="decr()">decrement</button>
+<h1>{{count}}</h1>
+
+
+Name<input type="text" [(ngModel)]="newname">
+<button (click)="updateName()">update</button>
+<h1 >{{newname}}</h1>
+
+<h1 *ngIf="show()">WaheGuru Ji</h1>
+<h1 *ngIf="display else hide ">WaheGuru Ji</h1>
+<ng-template #hide><h1>{{display_hiddenValue}}</h1></ng-template>
+
+<div><app-admin-login></app-admin-login></div>

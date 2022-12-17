@@ -1,0 +1,23 @@
+.active{
+    background-color: blue;
+    color: white;
+}
+
+.inactive{
+    background-color: aqua;
+    color: white;
+}
+
+.c1{
+    border: 5px solid green;
+}
+
+.color_red{
+    background-color: red;
+    color: white;
+}
+
+.color_blue{
+    background-color: blue;
+    color: white;
+}

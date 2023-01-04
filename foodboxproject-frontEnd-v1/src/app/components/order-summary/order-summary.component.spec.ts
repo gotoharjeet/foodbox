@@ -11,7 +11,9 @@ describe('OrderSummaryComponent', () => {
       declarations: [ OrderSummaryComponent ]
     })
     .compileComponents();
+  });
 
+  beforeEach(() => {
     fixture = TestBed.createComponent(OrderSummaryComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

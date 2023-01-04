@@ -6,8 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  heading="Wahe Guru ji"
-  ishidden:boolean=false;
-  isdisabled:boolean=false;
 
 }
